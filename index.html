@@ -10,20 +10,34 @@
 <body>
     <div class="app-container">
         <header class="app-header">
-            <h1>🩺 Медицинский тренажёр</h1>
-            <button class="btn btn-danger btn-sm" id="resetBtn">Сбросить</button>
+            <h1>🩺 Тренажёр</h1>
+            <div class="header-buttons">
+                <button class="btn btn-theme" id="themeToggle" title="Тема">🌙</button>
+                <button class="btn btn-danger btn-sm" id="resetBtn">Сброс</button>
+            </div>
         </header>
 
         <div class="stats-panel">
-            <div class="stats-text" id="stats">
-                <span>Загрузка...</span>
-            </div>
+            <div class="stats-text" id="stats"><span>Загрузка...</span></div>
             <div class="progress-bar-container">
                 <div class="progress-bar" id="bar"></div>
             </div>
         </div>
 
+        <div class="filter-panel">
+            <button class="btn btn-filter active" id="showAllBtn">Все</button>
+            <button class="btn btn-filter" id="showWrongBtn">❌ Ошибки</button>
+            <button class="btn btn-filter" id="showCorrectBtn">✅ Верно</button>
+            <button class="btn btn-filter" id="showUnansweredBtn">⚪ Новые</button>
+        </div>
+
+        <div class="search-panel">
+            <input type="text" id="searchInput" placeholder="🔍 Поиск по вопросу...">
+            <button class="btn btn-outline btn-sm" id="clearSearchBtn">✕</button>
+        </div>
+
         <div class="question-card" id="card">
+            <div class="question-number" id="questionNumber"></div>
             <div class="question-text" id="question"></div>
             <div class="answers-list" id="answers"></div>
             <div class="result-message" id="result"></div>
@@ -36,15 +50,9 @@
         </div>
 
         <div class="jump-panel">
-            <label for="jumpInput">Перейти к вопросу:</label>
+            <label for="jumpInput">Вопрос №:</label>
             <input type="number" id="jumpInput" min="1" placeholder="№">
             <button class="btn btn-outline" id="jumpBtn">OK</button>
-        </div>
-
-        <div class="hotkeys-hint">
-            Горячие клавиши: <kbd>1</kbd>-<kbd>9</kbd> — ответ ·
-            <kbd>Enter</kbd> — проверить ·
-            <kbd>←</kbd><kbd>→</kbd> — навигация
         </div>
     </div>
 
