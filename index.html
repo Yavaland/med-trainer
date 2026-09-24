@@ -10,9 +10,9 @@
 <body>
     <div class="app-container">
         <header class="app-header">
-            <h1>🩺 Тренажёр</h1>
+            <h1>🩺 Медицинский тренажёр</h1>
             <div class="header-buttons">
-                <button class="btn btn-theme" id="themeToggle" title="Тема">🌙</button>
+                <button class="btn btn-theme" id="themeToggle" title="Переключить тему">🌙</button>
                 <button class="btn btn-danger btn-sm" id="resetBtn">Сброс</button>
             </div>
         </header>
@@ -46,6 +46,7 @@
         <div class="controls">
             <button class="btn btn-secondary" id="prevBtn">← Назад</button>
             <button class="btn btn-primary" id="checkBtn">Проверить</button>
+            <button class="btn btn-outline" id="showAnswerBtn">💡 Показать ответ</button>
             <button class="btn btn-secondary" id="nextBtn">Вперёд →</button>
         </div>
 
@@ -53,6 +54,13 @@
             <label for="jumpInput">Вопрос №:</label>
             <input type="number" id="jumpInput" min="1" placeholder="№">
             <button class="btn btn-outline" id="jumpBtn">OK</button>
+        </div>
+
+        <div class="hotkeys-hint">
+            Горячие клавиши: <kbd>1</kbd>-<kbd>9</kbd> — выбрать · 
+            <kbd>Enter</kbd> — проверить · 
+            <kbd>←</kbd><kbd>→</kbd> — навигация · 
+            <kbd>H</kbd> — показать ответ
         </div>
     </div>
 
