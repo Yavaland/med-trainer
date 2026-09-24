@@ -5,6 +5,8 @@
     --success-bg: #dcfce7;
     --danger: #dc2626;
     --danger-bg: #fee2e2;
+    --hint: #f59e0b;
+    --hint-bg: #fef3c7;
     --bg: #f3f4f6;
     --card-bg: #ffffff;
     --text: #1f2937;
@@ -23,6 +25,8 @@
     --success-bg: #14532d;
     --danger: #ef4444;
     --danger-bg: #7f1d1d;
+    --hint: #fbbf24;
+    --hint-bg: #422006;
     --bg: #111113;
     --card-bg: #1c1c1f;
     --text: #e5e7eb;
@@ -223,6 +227,14 @@ body {
 .answers-list label.correct { background-color: var(--success-bg) !important; border-color: var(--success) !important; font-weight: 500; }
 .answers-list label.wrong { background-color: var(--danger-bg) !important; border-color: var(--danger) !important; }
 
+/* НОВЫЙ СТИЛЬ: Подсветка подсказки (желтый) */
+.answers-list label.hint-correct { 
+    background-color: var(--hint-bg) !important; 
+    border-color: var(--hint) !important; 
+    font-weight: 600;
+    color: var(--text);
+}
+
 .result-message {
     margin-top: 16px;
     font-size: 1.05rem;
@@ -285,6 +297,7 @@ body {
     .question-card { padding: 16px; }
     .question-text { font-size: 1rem; }
     .btn { font-size: 0.85rem; padding: 8px; }
+    .controls { flex-wrap: wrap; }
     .jump-panel { flex-direction: column; align-items: stretch; text-align: center; }
     .jump-panel input { width: 100%; }
     .filter-panel { flex-direction: column; }
