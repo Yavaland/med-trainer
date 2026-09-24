@@ -18,6 +18,7 @@
     --highlight: #fef08a;
 }
 
+/* ===== ТЁМНАЯ ТЕМА ===== */
 [data-theme="dark"] {
     --primary: #818cf8;
     --primary-hover: #6366f1;
@@ -45,6 +46,7 @@
 [data-theme="dark"] .highlight { color: #fff; }
 [data-theme="dark"] .btn-theme { background-color: #2d2d31; color: #fbbf24; }
 
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -71,6 +73,7 @@ body {
 
 .app-container { max-width: 800px; margin: 0 auto; }
 
+/* ===== HEADER ===== */
 .app-header {
     display: flex;
     justify-content: space-between;
@@ -81,6 +84,7 @@ body {
 .app-header h1 { font-size: 1.3rem; color: var(--primary); }
 .header-buttons { display: flex; gap: 8px; align-items: center; }
 
+/* ===== STATS & PROGRESS ===== */
 .stats-panel {
     background: var(--card-bg);
     padding: 14px 18px;
@@ -111,6 +115,7 @@ body {
     transition: width 0.4s ease;
 }
 
+/* ===== ФИЛЬТРЫ ===== */
 .filter-panel {
     display: flex;
     gap: 6px;
@@ -137,6 +142,7 @@ body {
     color: white;
 }
 
+/* ===== ПОИСК ===== */
 .search-panel {
     display: flex;
     gap: 8px;
@@ -159,6 +165,7 @@ body {
 }
 .search-panel input:focus { border-color: var(--primary); }
 
+/* ===== QUESTION CARD ===== */
 .question-card {
     background: var(--card-bg);
     padding: 20px;
@@ -174,6 +181,7 @@ body {
 .fade-enter { opacity: 0; transform: translateY(10px); }
 .fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s; }
 
+/* ===== НОМЕР ВОПРОСА ===== */
 .question-number {
     display: inline-block;
     background-color: var(--primary);
@@ -197,6 +205,7 @@ body {
     white-space: pre-wrap;
 }
 
+/* ===== ПОДСВЕТКА ПОИСКА ===== */
 .highlight {
     background-color: var(--highlight);
     padding: 1px 3px;
@@ -204,6 +213,7 @@ body {
     font-weight: 700;
 }
 
+/* ===== ОТВЕТЫ ===== */
 .answers-list { display: flex; flex-direction: column; gap: 8px; }
 .answers-list label {
     display: flex;
@@ -227,10 +237,10 @@ body {
 .answers-list label.correct { background-color: var(--success-bg) !important; border-color: var(--success) !important; font-weight: 500; }
 .answers-list label.wrong { background-color: var(--danger-bg) !important; border-color: var(--danger) !important; }
 
-/* НОВЫЙ СТИЛЬ: Подсветка подсказки (желтый) */
-.answers-list label.hint-correct { 
-    background-color: var(--hint-bg) !important; 
-    border-color: var(--hint) !important; 
+/* ===== ПОДСВЕТКА ПОДСКАЗКИ (ЖЁЛТЫЙ) ===== */
+.answers-list label.hint-correct {
+    background-color: var(--hint-bg) !important;
+    border-color: var(--hint) !important;
     font-weight: 600;
     color: var(--text);
 }
@@ -243,8 +253,10 @@ body {
     min-height: 24px;
 }
 
+/* ===== CONTROLS ===== */
 .controls { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
 
+/* ===== JUMP PANEL ===== */
 .jump-panel {
     display: flex;
     align-items: center;
@@ -265,6 +277,7 @@ body {
 }
 .jump-panel input:focus { border-color: var(--primary); }
 
+/* ===== BUTTONS ===== */
 .btn {
     padding: 10px 14px; border: none; border-radius: 10px;
     font-size: 0.9rem; font-weight: 600; cursor: pointer;
@@ -282,6 +295,8 @@ body {
 .btn-outline { background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 8px 12px; }
 .btn-outline:hover { background-color: var(--primary); color: white; }
 .btn-sm { padding: 6px 12px; font-size: 0.8rem; }
+
+/* ===== КНОПКА ТЕМЫ ===== */
 .btn-theme {
     background-color: var(--border); color: #f59e0b;
     padding: 6px 12px; font-size: 1.2rem;
@@ -289,9 +304,11 @@ body {
 }
 .btn-theme:hover { transform: rotate(20deg); }
 
+/* ===== NO RESULTS ===== */
 .no-results { text-align: center; padding: 40px 20px; color: var(--text-muted); }
 .no-results-icon { font-size: 3rem; margin-bottom: 10px; }
 
+/* ===== MOBILE ===== */
 @media (max-width: 600px) {
     body { padding: 10px; }
     .question-card { padding: 16px; }
